@@ -1,0 +1,2 @@
+# Culc_Logic_Design
+計算機論理設計のVerilogコード
