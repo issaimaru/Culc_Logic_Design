@@ -1,0 +1,66 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x62e4a6cc1260 .scope module, "HalfAdderSim" "HalfAdderSim" 2 3;
+ .timescale -9 -9;
+v0x62e4a6cd24e0_0 .var "a", 0 0;
+v0x62e4a6cd25a0_0 .var "b", 0 0;
+v0x62e4a6cd2670_0 .net "carry", 0 0, L_0x62e4a6cd29a0;  1 drivers
+v0x62e4a6cd2770_0 .net "sum", 0 0, L_0x62e4a6cd2840;  1 drivers
+S_0x62e4a6cc13f0 .scope module, "half" "HalfAdder" 2 6, 3 1 0, S_0x62e4a6cc1260;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "c";
+L_0x62e4a6cd2840 .functor XOR 1, v0x62e4a6cd24e0_0, v0x62e4a6cd25a0_0, C4<0>, C4<0>;
+L_0x62e4a6cd29a0 .functor AND 1, v0x62e4a6cd24e0_0, v0x62e4a6cd25a0_0, C4<1>, C4<1>;
+v0x62e4a6cc1640_0 .net "a", 0 0, v0x62e4a6cd24e0_0;  1 drivers
+v0x62e4a6cd2210_0 .net "b", 0 0, v0x62e4a6cd25a0_0;  1 drivers
+v0x62e4a6cd22d0_0 .net "c", 0 0, L_0x62e4a6cd29a0;  alias, 1 drivers
+v0x62e4a6cd2370_0 .net "s", 0 0, L_0x62e4a6cd2840;  alias, 1 drivers
+    .scope S_0x62e4a6cc1260;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x62e4a6cd24e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x62e4a6cd25a0_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x62e4a6cd24e0_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x62e4a6cd24e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x62e4a6cd25a0_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x62e4a6cd24e0_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x62e4a6cd24e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x62e4a6cd25a0_0, 0, 1;
+    %delay 100, 0;
+    %vpi_call 2 14 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x62e4a6cc1260;
+T_1 ;
+    %vpi_call 2 18 "$monitor", "a=%d, b=%d, s=%d, c=%d", v0x62e4a6cd24e0_0, v0x62e4a6cd25a0_0, v0x62e4a6cd2770_0, v0x62e4a6cd2670_0 {0 0 0};
+    %vpi_call 2 19 "$dumpfile", "halfadder.vcd" {0 0 0};
+    %vpi_call 2 20 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "HalfAdder_sim.v";
+    "HalfAdder.v";

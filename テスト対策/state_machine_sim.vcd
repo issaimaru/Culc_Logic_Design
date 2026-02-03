@@ -1,0 +1,153 @@
+$date
+	Tue Feb  3 02:28:05 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module state_machine_sim $end
+$var wire 2 ! cs [1:0] $end
+$var reg 1 " clk $end
+$var reg 1 # halt $end
+$var reg 1 $ reset $end
+$var reg 1 % run $end
+$scope module state_machine1 $end
+$var wire 1 " clk $end
+$var wire 1 # halt $end
+$var wire 1 $ reset $end
+$var wire 1 % run $end
+$var reg 2 & cs [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 &
+0%
+0$
+0#
+0"
+b0 !
+$end
+#1
+1$
+#50
+1"
+#100
+0"
+#101
+1%
+#150
+b1 !
+b1 &
+1"
+#200
+0"
+#250
+b10 !
+b10 &
+1"
+#300
+0"
+#301
+1#
+0%
+#350
+b0 !
+b0 &
+1"
+#400
+0"
+#450
+1"
+#500
+0"
+#550
+1"
+#600
+0"
+#650
+1"
+#700
+0"
+#750
+1"
+#800
+0"
+#801
+1%
+0#
+#850
+b1 !
+b1 &
+1"
+#900
+0"
+#950
+b10 !
+b10 &
+1"
+#1000
+0"
+#1050
+b1 !
+b1 &
+1"
+#1100
+0"
+#1150
+b10 !
+b10 &
+1"
+#1200
+0"
+#1250
+b1 !
+b1 &
+1"
+#1300
+0"
+#1350
+b10 !
+b10 &
+1"
+#1400
+0"
+#1450
+b1 !
+b1 &
+1"
+#1500
+0"
+#1550
+b10 !
+b10 &
+1"
+#1600
+0"
+#1650
+b1 !
+b1 &
+1"
+#1700
+0"
+#1750
+b10 !
+b10 &
+1"
+#1800
+0"
+#1801
+b0 !
+b0 &
+0$
+#1850
+1"
+#1900
+0"
+#1901
